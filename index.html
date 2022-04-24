@@ -10,8 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<!--<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<style>
 		#rcorners1 {
@@ -49,47 +48,41 @@
 		width: 300px;
 		height: 200px; 
 		}
-
-		body {
-			font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		
+		#HeaderOG{
+			font-family: "Roboto", Helvetica, sans-serif;
+			font-size: 20px;
+			padding: 0px;
 		}
-		h2{
-			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-			align-self: center;
-		}
+/* 
+		#header1{
+			font-family: "Roboto", Helvetica, sans-serif;
+			font-size: 20px;
+		} */
 	  </style>
 	<body class="Portfolio Lucy Lesire">
 		<div id="page-wrapper">
-
 			<!-- Header -->
-			<header id="header">
-				<h1 id="logo"><a href="index.html">Lucy Lesire</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li>
-							<a href="#">Projects</a>
-							<ul>
-								<li><a href="FruutWars.html">FruutWars</a></li>
-								<li><a href="right-sidebar.html">Stormy Weathers</a></li>
-								<li><a href="PortalRemake.html">Portal Remake</a></li>
-								<li>
-									<a href="#">Submenu</a>
-									<ul>
-										<li><a href="#">Option 1</a></li>
-										<li><a href="#">Option 2</a></li>
-										<li><a href="#">Option 3</a></li>
-										<li><a href="#">Option 4</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="elements.html">About</a></li>
-						<li><a href="#" class="button primary">Contact</a></li>
-					</ul>
-				</nav>
-			</header>
-
+			<div id="HeaderOG">
+				<header id="header">
+					<h1 id="logo" style="font-size:20px; font-weight: normal;";><a href="index.html" >Lucy Lesire</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#">Projects</a>
+								<ul>
+									<li style="font-family: 'Roboto', Helvetica, sans-serif; font-size: 16px; padding: 5px 40px 5px 0px ;"><a href="FruutWars.html">FruutWars</a></li>
+									<li style="font-family: 'Roboto', Helvetica, sans-serif; font-size: 16px; padding: 5px 40px 5px 0px ;"><a href="StormyWeathers.html">Stormy Weathers</a></li>
+									<li style="font-family: 'Roboto', Helvetica, sans-serif; font-size: 16px; padding: 5px 40px 5px 0px ;"><a href="PortalRemake.html">Portal Remake</a></li>
+								</ul>
+							</li>
+							<li><a href="elements.html">About</a></li>
+							<li><a href="#" class="button primary">Contact</a></li>
+						</ul>
+					</nav>
+				</header>
+			</div>
 			<!-- Banner -->
 			<div id="main" class="wrapper style1">
 				<div class="container">
@@ -103,7 +96,7 @@
 					</header>
 
 			<!-- One -->
-
+			<head>		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></head>
 			<div class="w3-row-padding">
 				<div class="w3-third w3-container w3-margin-bottom">
 					<a href="FruutWars.html"><img src="images/FruutWars.png" alt="Fruut Wars" id="rcorners3" class="w3-hover-opacity"></a>
@@ -190,8 +183,7 @@
 						<li>&copy; Portfolio Lucy Lesire. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</footer>
-
-		</div>
+			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -202,6 +194,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
