@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portal Remake: Overlord Edition</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<style>
+	#rcorners1 {
+		border-radius: 25px 25px 25px 25px;
+		background: #000000;
+		padding: 0px;
+		width: 800px;
+		height: 517px;  
+		}
+		#rcorners2 {
+		border-radius: 25px 25px 25px 25px;
+		background: #000000;
+		padding: 0px;
+		width: 450px;
+		height: 222px;  
+		}
+		#rcorners3 {
+		border-radius: 25px 25px 25px 25px;
+		background: #000000;
+		padding: 0px;
+		width: 450px;
+		height: 291px;  
+		}
+	</style>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<h1 id="logo"><a href="index.html">Lucy Lesire</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Projects</a>
+							<ul>
+								<li><a href="FruutWars.html">FruutWars</a></li>
+								<li><a href="right-sidebar.html">Stormy Weathers</a></li>
+								<li><a href="PortalRemake.html">Portal Remake</a></li>
+								<li>
+									<a href="#">Submenu</a>
+									<ul>
+										<li><a href="#">Option 1</a></li>
+										<li><a href="#">Option 2</a></li>
+										<li><a href="#">Option 3</a></li>
+										<li><a href="#">Option 4</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="elements.html">About</a></li>
+						<li><a href="#" class="button primary">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Portal Remake</h2>
+							<p>Overlord Edition<br>
+						</header>
+						<div class="row gtr-150">
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<h3>Portal Remake</h3>
+											<p>For the course, Graphics Programming 2, we have to (re)make a game in the Overlord Engine, a custom engine created by our teacher, Thomas Goussaert. 
+											<br>I chose to remake portal as it fell within the category of games we were allowed to make and I have loved portal since I was a kid.</br>	
+											<br>The goal of this project is to remake a level, add in the basic mechanics and apply: Animations, Ambient Occlusion, Shadow Mapping, Shaders, Picking, Post-Processing and more.</br></p>
+										</section>
+										<hr />
+										<section>
+											<img src="images/First_PortalTest.png" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<p>Portal version one (without mapping the texture)</p>
+											<img src="images/Second_PortalTest.png" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<p>Portal version two (with mapping the texture)</p>
+											<img src="images/PortalRecursion.gif" alt="Fruut Wars" id="rcorners3" class="w3-hover-opacity">
+											<p>Portal version 3 (with recursion)</p>
+											<!-- <h3>Learning</h3>
+											<p>During this Project I have learned how to make a full fledged game in Unity.
+											<br>Furthermore I have also learned how to work under a time pressure, since we only had 4 days to complete the project.</br>
+											Also I learned how to write realstic movement for planes.
+											<br>Finally I have also learned how to use procedural spawning, managing and deleting of objects.</br>
+											</p> -->
+										</section>
+									</section>
+
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+
+								<!-- Content -->
+									<section id="content">
+										<div style="padding-top: 25px; padding-bottom: 25px;">
+											<img src="images/PortalsMain.gif" alt="Fruut Wars"  id="rcorners1" class="w3-hover-opacity">
+										</div>
+										<h3>Prototyping</h3>
+										<p>Before starting the actual project, I decided to prototype the portal mechanic in Unity first.<p>
+										<p>I started with implementing the portal shader itself, I did this by adding 2 cameras int the scene that rotate and position themselves as the player is to their linked portal.
+											I then set this view to texture of a plane on the portal, creating the illusion of a portal.
+										<br>However this still seemed a little off, it was showing the view of the camera attached through the portal (making the portal visible), rather then actually showing the view you would see through the portal.</br>
+										To fix this, I mapped the view of the camera that you see through the portal to the plane of the portal, creating the correct effect.
+										<br>After this I implemented the Teleporting itself. This I achieved by registering the traveller, teleporting them to the location of the linked portal, unregistering them from the first portal and registering them to the second portal.</br>
+										Finally I implemented recursion, when you looked through a portal, you could see an infinite amount of portals, which looked a bit weird.
+									I fixed this by implemnting recursion, with a set amount. The recursion will map the next image smaller and smaller per iteration of portal, until the final one, which is drawn black.
+									</p>
+
+		
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class ="docs">
+					<a href = "mailto: Lucy.lesire@outlook.com">Email: Lucy.Lesire@outlook.com</a>
+						<p style = "padding-top: 10px;" >telephone: +32471903948
+					</p>
+					<a href="/resources/CVLucyLesire.pdf" download CV>Download my Curriculum Vitae</a>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Portfolio Lucy Lesire. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
