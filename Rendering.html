@@ -15,17 +15,29 @@
 	<style>
 	#rcorners1 {
 		border-radius: 25px 25px 25px 25px;
-		background: #000000;
+		background: #171717;
 		padding: 0px;
-		width: 800px;
-		height: 450px;
+		width: 668px;
+		height: 507px;
 		}
 		#rcorners2 {
 		border-radius: 25px 25px 25px 25px;
 		background: #000000;
 		padding: 0px;
-		width: 450px;
-		height: 253px;  
+		width: 668px;
+		height: 507px; 
+		}
+		#rcorners3 {
+		border-radius: 0px;
+		padding: 0px;
+		width: 668px;
+		height: 507px; 
+		}
+		#rcorners4 {
+		border-radius: 0px;
+		padding: 0px;
+		width: 668px;
+		height: 507px;
 		}
 	</style>
 	<body class="is-preload">
@@ -53,7 +65,7 @@
 					</ul>
 				</nav>
 			</header>
-			
+
 
 			<!-- Main -->
 				<div id="main" class="wrapper style1">
@@ -61,58 +73,85 @@
 						<header class="major">
 							<h2>Rendering</h2>
 							<p>Software Raytarcer, Software- and Hardware Rasterizer<br>
-							<a href = "https://flowerxqueen.itch.io/miss-misfortune">https://itch.io/miss-misfortune</a></br></p>
+							<a href = "https://flowerxqueen.itch.io/miss-misfortune">Software Raytracer</a>
+							<a href = "https://flowerxqueen.itch.io/miss-misfortune">Software Rasterizer</a>
+							<a href = "https://flowerxqueen.itch.io/miss-misfortune">Dual Rasterizer</a></p>
 						</header>
-						<div class="row gtr-150">
-							<div class="col-4 col-12-medium">
 
-								<!-- Sidebar -->
-									<section id="sidebar">
-										<section>
-											<h3>Miss Misfortune</h3>
-											<p>During the Fall holiday of 2021, me and my friend Nathan (Artist) decided to join a gamejam hosted by students at DAE, the theme of the jam was "Skull".
-											<br>After some brainstorming we decided to make a 2D platformer, this would make the load on us not too difficult, because we only had 2 days.</br>	
-											<br>The goal of the game is to pass all 13 levels, either containing parcour or a form of misfortune that the player has to cause.<br>
-											<br>Some types of misfortune can include: "Tipping over salt, breaking mirrors, walking under ladders, ..."</p>
-										</section>
-										<hr />
-										<section>
-											<img src="images/MisfortuneSalt.png" style="max-width: 100%;" alt="Salt" id="rcorners2" class="w3-hover-opacity">
-											<img src="images/MisfortuneCrack.png" style="max-width: 100%;" alt="Crack" id="rcorners2" class="w3-hover-opacity">
-											<h3>Learning</h3>
-											<p>During this project I have learned how to make a full fledged 2D game in Unity.
-											<br>Furthermore I have also learned how to work under a time pressure, since we only had 3 days to complete the project.</br>
-												I learned how to write 2D movement behaviors, 2D interactions and 2D level design.
-											<br>Finally I have also learned how to implement sound in Unity.</br>
-											</p>
-										</section>
-									</section>
+							<!-- Content -->
+							<section id="content">
+								<h3>Software Raytracer</h3>
+								<p style="margin-bottom: 20px">During the first part of the course "Graphics Programming 1", we learned how a raytarcer worked and how to make a software Raytracer.
+									<br>During the year we had to build our raytracer up from scatch, applying each step of the process.
+									
+								<div>
+									<img src="images/SoftwareRaytracer.gif" style="max-width: 100%; vertical-align: middle; margin-right: 50px; float: left;" alt="Salt" id="rcorners2" class="w3-hover-opacity">
 
-							</div>
-							<div class="col-8 col-12-medium imp-medium">
-								<!-- Content -->
-									<section id="content">
-										<div style="padding-top: 25px; padding-bottom: 25px;">
-											<img src="images/MisfortunePile.png" style="max-width: 100%; max-height: 100%;" alt="Fruut Wars"  id="rcorners1" class="w3-hover-opacity">
+									<div id="rcorners3" style="display: flex; justify-content: center; align-items: center;">
+										<p>The raytracer will shoot a ray out of the camera per pixel it has to render. We can check if this ray collides with an object in the scene, if it does we will render the pixel in the correct color (determined by the material of the object). 
+										<br><br>Next we can approxiamate a simulation of the lightning and shadows by shooting (shadow)-rays from our light sources. By checking if an object is blocking the path of the light, we can know if a pixel is shadowed or illuminated.
+										<br><br>Finally we implemented PBR (physical based rendering) shaders, this will give our object a realistic look, in the form of metals and plastics.
+										<br>Through this process we can see some realistic looking spheres and triangles.
+									</div>
+								</div>
+								<hr />
+							</section>
+
+							<!-- Content -->
+							<section id="content">
+								<h3>Software Raytracer: Meshes</h3>
+								<div>
+									<img src="images/SoftwareRaytracerMesh.png" style="max-width: 100%; vertical-align: middle; margin-left: 50px; float: right;" alt="Salt" id="rcorners2" class="w3-hover-opacity">
+									
+									<div id="rcorners3" style="display: flex; justify-content: center; align-items: center;">
+
+										<p>The next part in making our raytracer was adding mesh rendering. We achieved this by rendering triangles (which we already achieved in the previous section). Instead now we would be rendering a bunch of them in a group, creating a mesh.
+										<br><br>However we had to do some optimizing since a mesh can contain a lot of triangles, we did this by adding an AABB (Axis Aligned Bounding Box). The perfomance would still take a hit however, it is a Software Raytracer after all.</p>
+							
+									</div>
+								</div>
+								<hr />
+							</section>
+
+
+							<!-- Content -->
+							<section id="content">
+								<h3>Software Rasterizer</h3>
+								<p style="margin-bottom: 20px">During the next part of the course, we learned how a rasterizer was built up and how to make a software Rasterizer and write a basic software Phong Shader.
+									<br>Once again we had to build it up from scratch, applying every step of the process, however do to the fact that we had learned how to make a Raytracer already, this went a lot of faster.
+									
+
+									<div>
+										<img src="images/SoftwareRasterizer.gif" style="max-width: 100%;vertical-align: middle; margin-right: 50px; float: left;" alt="Salt" id="rcorners1" class="w3-hover-opacity">
+
+										<div id="rcorners4" style="display: flex; justify-content: center; align-items: center;">
+											<div>
+												<p style="margin-bottom: 20px">The rasterizer workes in 3 stages: The Projection stage, The Rasterization stage and The Pixel Shading stage. </p>
+												<p style="margin-bottom: 20px">In the Projection stage we convert the points of our triangles to Screen Space, first we multiply them with the WVP-Matrix (World View Projection), and then we do a perspective divide with the w-value of our position.</p>
+												<p style="margin-bottom: 20px">In the Rasterization stage we do a frustum culling and tranform our vertices into NDC-vertices (Normalized Device Coördinates). </p>
+												<p style="margin-bottom: 20px">And finally in the Pixel Shading stage, we check if a pixel is inside of a triangle and shade and/or color it accordingly.
+												<br>We optimize this by using a bounding box around our triangle, so we don't have to check if every possible pixel falls in our triangle, but just the ones in the bounding box. </p>
+											</div>
 										</div>
-										<h3>The Unity Engine </h3>
-										<p>We chose the Unity Engine because it works perfectly for developing 2D games.<p>
-										<p>My role in the project was very broad, due to the small team size, I had to take all the coding on me. My work contained the following: </p>
-										<ul>
-											<li>Writing and implementing the movement behavior.</li>
-											<li>Writing and implementing the misfortune challenges. </li>
-											<li>Writing and implementing the death mechanic.</li>
-											<li>Writing and implementing a score system, that keeps track of howmany challenges you completed, aswel as skulls collected.</li>
-											<li>Implementing the skull movement.</li>
-											<li>Implementing the HUD & menu's</li>
-											<li>Implementing the sound that activate on certain actions, music that plays throughout the game.</li>
-										</ul>
-									</section>
+									</div>
+								<hr />
+							</section>
 
-							</div>
-						</div>
-					</div>
-				</div>
+							<!-- Content -->
+							<section id="content">
+								<h3>Hardware Rasterizer: DX11</h3>
+								<div>
+									<img src="images/HardwareRasterizer.gif" style="max-width: 100%; vertical-align: middle; margin-left: 50px; float: right;" alt="Salt" id="rcorners1" class="w3-hover-opacity">
+									
+									<div id="rcorners3" style="display: flex; justify-content: center; align-items: center;">
+
+										<p style="margin-bottom: 20px;">The final part of the course, was too transform our software Rasterizer, into a Hardware Rasterizer, by making use of DirectX11.
+										<br><br>We turned our Software Phong shader into a HLSL writen Phong shader and applies this to our model.
+										<br><br> We also added some transparency in the combustion of the engine, to make our model look complete.</p>
+									</div>
+								</div>
+								<hr/>
+							</section>
 
 			<!-- Footer -->
 			<footer id="footer">
