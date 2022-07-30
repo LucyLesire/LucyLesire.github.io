@@ -89,11 +89,11 @@
 										</section>
 										<hr />
 										<section>
-											<img src="images/PortalGif2.gif" style="max-width: 100%;" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<img src="images/PortalGif2.gif" style="max-width: 100%;" alt="View through portal" id="rcorners2" class="w3-hover-opacity">
 											<p>View through a portal</p>
-											<img src="images/PortalGif3.gif" style="max-width: 100%;" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<img src="images/PortalGif3.gif" style="max-width: 100%;" alt="Teleportation" id="rcorners2" class="w3-hover-opacity">
 											<p>Portal Teleportation</p>
-											<img src="images/PortalGif4.gif" style="max-width: 100%;" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<img src="images/PortalGif4.gif" style="max-width: 100%;" alt="Portal shooting" id="rcorners2" class="w3-hover-opacity">
 											<p>Portal Shooting</p>
 										</section>
 									</section>
@@ -104,7 +104,7 @@
 								<!-- Content -->
 									<section id="content">
 										<div style="padding-top: 25px; padding-bottom: 25px;">
-											<img src="images/PortalGif1.gif"  style="max-width: 100%; max-height: 100%;" alt="Fruut Wars"  id="rcorners1" class="w3-hover-opacity">
+											<img src="images/PortalGif1.gif"  style="max-width: 100%; max-height: 100%;" alt="Main portal"  id="rcorners1" class="w3-hover-opacity">
 										</div>
 										<h3>Overlord Engine</h3>
 										<p>The Engine we used was created by our teachers Thomas Goussaert and Mathieu Dellaere. However aA lot of functions, including but not limited to: Shadow Mapping, Text Rendering, Font Rendering, Animations, Texture Shaders, Geometry Shaders, Post-Processing, Picking, Particles, Skinning; were implemented by me.<br>
@@ -142,17 +142,17 @@
 									<section id="sidebar">
 										<section>
 											<h3>Progress Shots</h3>
-											<img src="images/First_PortalTest.png" style="max-width: 100%;" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<img src="images/First_PortalTest.png" style="max-width: 100%;" alt="Simple Portals" id="rcorners2" class="w3-hover-opacity">
 											<p>Unity: Simple Portals</p>
-											<img src="images/Second_PortalTest.png" style="max-width: 100%;" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<img src="images/Second_PortalTest.png" style="max-width: 100%;" alt="Mapped Portals" id="rcorners2" class="w3-hover-opacity">
 											<p>Unity: Mapped Portals</p>
-											<img src="images/PortalRecursion.gif" style="max-width: 100%;" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<img src="images/PortalRecursion.gif" style="max-width: 100%;" alt="Teleporting" id="rcorners2" class="w3-hover-opacity">
 											<p>Unity: Teleporting</p>
-											<img src="images/PortalGif2.gif" style="max-width: 100%;" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<img src="images/PortalGif2.gif" style="max-width: 100%;" alt="Overlord" id="rcorners2" class="w3-hover-opacity">
 											<p>Overlord: Mapped Portals</p>
-											<img src="images/PortalGif4.gif" style="max-width: 100%;" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<img src="images/PortalGif4.gif" style="max-width: 100%;" alt="Shooting" id="rcorners2" class="w3-hover-opacity">
 											<p>Overlord: Shooting!</p>
-											<img src="images/PortalGif1.gif" style="max-width: 100%;" alt="Fruut Wars" id="rcorners2" class="w3-hover-opacity">
+											<img src="images/PortalGif1.gif" style="max-width: 100%;" alt="Overlord Teleporting" id="rcorners2" class="w3-hover-opacity">
 											<p>Overlord: Teleporting</p>
 										</section>
 									</section>
@@ -165,23 +165,23 @@
 										<h3>My experiences</h3>
 										<div id="rcorners3">
 											<p> <u>Prototyping</u> <br> When starting my project, I decided to start by making a prototype in Unity, along side a very helpful video by Sebastian Lague and a web tutorial by Daniel Ilett.
-												The first thing I did was creating a simple screen that had a camera linked to it. When the player moves, the portal-camera moves in the same way, except relative to it's portal rather then to the player.
-											With this working I made sure that what the portal-camera saw was displayed onto a second screen that worked in the same way, each portal-camera displaying what they saw on the other's screen. </p>
+												The first thing I did was creating a simple screen that had a camera linked to it. When the player moves, the portal-camera moves in the same way, except relative to it's portal rather than to the player.
+											With this working I made sure that what the portal-camera saw was displayed onto a second screen that worked in the same way. </p>
 										</div>
 										<div id="rcorners3">
-											<p>Sadly enough it wasn't quite perfect yet, since the camera was not properly mapped to the screen, you would see from the camera's standpoint, not quite giving it the portal vibe. To fix this problem, I mapped the camera correctly to the screen, by usign a shader. the shader took what the camera saw and cut out the parts outside of the portal, leaving the parts inside of the portal and creating the illusion of a portal.</p>
+											<p>Sadly enough it wasn't quite perfect yet, since the camera was not properly mapped to the screen, you would see it from the camera's standpoint, not quite giving it the portal vibe. To fix this problem, I mapped the camera correctly to the screen, by using a shader. The shader took what the camera saw and cut out the parts outside of the portal, leaving the parts inside of the portal and creating the illusion of a portal.</p>
 										</div>
 										<div id="rcorners3">
 											<p>Finally I implemented teleporting and recursions. Teleporting was quite simple, I moved the player once it's camera passed the screen (by using the dot product) and teleported the player to the other portal, and then finally I made sure that the player was rotated in the correct way (the difference in rotation between the portals), so that they can succesfully walk out of the portal.</p>	
 										</div>
 										<div id="rcorners3">
-											<p>Overlord Engine: With our prototype out of the way, it was time for me to translate it into the custom Overlord Engine, it wasn't easy to start with since Overlord was not a Visual Engine, compared to Unity. I started in the same way as my prototype and created two screens with cameras that move int the same way as the player, but relative to their portals. Without Unity's super helpful math functions, it got a little difficult.</p>
+											<p><u>Overlord Engine</u> <br> With our prototype out of the way, it was time for me to translate it into the custom Overlord Engine, it wasn't easy to start with since Overlord was not a Visual Engine, compared to Unity. I started in the same way as my prototype and created two screens with cameras that move in the same way as the player, but relative to their portals. Without Unity's super helpful math functions, it got a little difficult.</p>
 										</div>
 										<div id="rcorners3">
-											<p>After the camera's were finally working, I started work on seamless portals, which was the easist step out of the way, just using a simple raycast and some rotation math, I managed to make it work in no time.</p>
+											<p>After the camera's were finally working, I started to work on seamless portals, which was the easiest step out of the way, just using a simple raycast and some rotation math. I managed to make it work in no time.</p>
 										</div>
 										<div id="rcorners3">
-											<p>My dreaded enemy was the teleportation, implementing this into Overlord was quite a though, but with a bunch of math I managed to do it. First I store any nearby travellers to the portal in a list of travellers, then if one of those travellers crossed the portal (the dot product of their forward vectors has the same sign), I teleport (move) the traveller to the other portal, next I rotate the traveller so that it is facing otherwards relative to the portal they just travelled to (the portal is behind them), and finally I remove them from the list of travellers of the old portal.</p>
+											<p>My dreaded enemy was the teleportation, implementing this into Overlord was quite tough, but with a bunch of math I managed to do it. First I store any nearby travellers to the portal in a list of travellers, then if one of those travellers crossed the portal (the dot product of their forward vectors has the same sign). I teleport (move) the traveller to the other portal. Next I rotate the traveller so that it is facing outwards relative to the portal they just travelled to (the portal is behind them). Finally I remove them from the list of travellers of the old portal.</p>
 										</div>
 									</section>
 
