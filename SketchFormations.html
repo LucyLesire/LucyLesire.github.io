@@ -61,27 +61,26 @@
 				<div id="main" class="wrapper style1">
 					<div class="container">
 						<header class="major">
-							<h2>Tune Runner</h2>
-							<p>Run on the beat beat beat! <br>
-								<a href = "https://github.com/LucyLesire/TuneRunnerPrototype">Source code Tune Runner</a></p>
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/tvcxjoq6UL8" title="Tune Runner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								<br>
+							<h2>Real time changes in sketch based RTS formations</h2>
+							<p>Research into sketch based Real Time Strategy game formations<br>
+								<a href = "resources/LucyLesire_ResearchPaper_SketchRTSFormations.pdf">Paper</a></p>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/JHa6KudYUbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>								<br>
 							</header>
 						<div class="row gtr-150">
 							<div class="col-4 col-12-medium">
 								<!-- Sidebar -->
 									<section id="sidebar">
 										<section>
-											<h3>Tune Runner</h3>
-											<p>During one of my courses, Game Mechanics, we had to make a game around 2 keywords "Melody" and "Countdown". 
-											<br>After some searching for some ideas, I came up with a music beat sync game where the goal is the move on the beat, whilest making sure you don't run out of time.</br>	
-											<br>This is ofcourse only a prototype so the art assets are rather basic, and the "beat calculator" is not quite perfect. However it does already produce quite a nice prototype.
-											<br>Your goal in the game is to hit the beats (on the music), by pressing space when running over them with the player. In the meanwhile a countdown clock ticks down, and it is your goal to not make it go to 0. During the game you can gain time by hitting beats, and lose time by missing beats and hitting obstacles.</p>
+											<h3>Sketch based RTS formations</h3>
+											<p>In this section, you can learn more about my research adventure into sketch based RTS formations. 
+											<br>In this research project, I go over my findings into the RTS formations and gesture recognition fields. I also go over my approach to create a gesture recognition based sketch formation generator.
+											<br>This project was made for my graduation work in my bachelor degree of Game Development.</p>
 										</section>
 										<hr />
 										<section>
-											<img src="images/2DAE14_Lesire_Lucy_Unreal_Screenshot03.png" style="max-width: 100%; max-height: 100%;" alt="Powerup green"  id="rcorners2" class="w3-hover-opacity">
-											<img src="images/2DAE14_Lesire_Lucy_Unreal_Screenshot04.png" style="max-width: 100%; max-height: 100%;" alt="Powerup yellow"  id="rcorners2" class="w3-hover-opacity">
+											<img src="images/RTS2.gif" style="max-width: 100%; max-height: 100%;" alt="Unit Dying"  id="rcorners2" class="w3-hover-opacity">
+											<img src="images/RTS3.gif" style="max-width: 100%; max-height: 100%;" alt="Storing gestures"  id="rcorners2" class="w3-hover-opacity">
+											<img src="images/RTS4.gif" style="max-width: 100%; max-height: 100%;" alt="Alternate unit dying"  id="rcorners2" class="w3-hover-opacity">
 										</section>
 									</section>
 							</div>
@@ -90,26 +89,35 @@
 								<!-- Content -->
 									<section id="content">
 										<div style="padding-top: 25px; padding-bottom: 25px;">
-											<img src="images/TuneRunner1.gif" style="max-width: 100%; max-height: 100%;" alt="Main Tune Runner"  id="rcorners1" class="w3-hover-opacity">
+											<img src="images/RTS5.gif" style="max-width: 100%; max-height: 100%;" alt="Main Tune Runner"  id="rcorners1" class="w3-hover-opacity">
 										</div>
-										<h3>The Unreal Engine 4.27</h3>
-										<p>We had to work in the Unreal Engine because the goal of this course was making us familiar with The Unreal Engine and C++ in Unreal.<p>
-										<p>My goal was ofcourse to have a full prototype around my two keywords, in order to achieve this I implemented: </p>
-										<ul>
-											<li>Procedural spawning of beats, that are spawned upon beats of the music</li>
-											<li>Turning music and sound waves into beats.</li>
-											<li>Collision detections between player and beats.</li>
-											<li>Implementing of powerups that slow down and speed up time.</li>
-											<li>Implementing powerups that allow you to move on all lanes at the same time and automatically activate beats</li>
-											<li>Simple movement between lanes.</li>
-											<li>Music that plays through the game.</li>
-											<li>HUD that shows countdown clock.</li>
-										</ul>
-										<h3>Learning</h3>
-										<p>During this Project I have learned how to make a prototype in Unreal Engine.
-										<br>I have also learned more about beat syncing and how to use soundwaves to turn them into beats.
-										<br>Furthermore I leanred how to use (simple) procedural spawning, which helped me a lot in later projects. Finally I also learned how to write c++ in Unreal Engine. </br></br></p>
-									
+										<h3>Real-Time Strategy formations</h3>
+										<p> This research project presents real time changes in a custom formation system, to improve formations in existing real time
+											strategy games. 
+										<br> The project allows the user to use simple drawings to create real time strategy game formations in
+											real time. At the same time, the project also allows for the user to remove units in existing formations, causing the
+											formation to reform the original formation, but with less units. 
+										<br> The project recognizes user input drawings by the use
+											of a gesture recognition algorithm, allowing the user to create formation templates and let them be recognized
+											later. The formations are also improved by the use of a grid, allowing for filling of formation and the removement
+											of minor unwanted flaws in the drawing. 
+										<br> The project ensures that the scaling of the formation is always as optimal
+											as possible to the number of units in the formation. In this project you will be able to see that the scaling will always
+											account for all units, with a marge of 2 units. The real-time changes in the project allow for direct implementation
+											in to existing real time strategy games, to enhance formation control. </p>
+
+											<p>I have made this project over the span of 3 months, whilest working on another project at the same time. 
+												<br> This project has learned me the following things: </p>
+												<ul>
+													<li> How formations are formed in RTS games </li>
+													<li> How gesture recognition algorithms work </li>
+													<li> How point-clouds work </li>
+													<li> How you can generate formations from gestures by using grids </li>
+												</ul>
+
+											<p>More information can be found in my 
+												<a href = "resources/LucyLesire_ResearchPaper_SketchRTSFormations.pdf">paper</a>.</p>
+										</p>
 									</section>
 
 							</div>
