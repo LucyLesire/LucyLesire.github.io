@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Portfolio Lucy Lesire</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/main2.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>$(document).ready(function()
+	{
+		$("nav a").removeClass("active")
+        $('#' + 'work').addClass("active");
+	});
+	</script>
+</head>
+<style>
+	#navLink {
+		width: 0.5em;
+		height: 0.5em;
+		line-height: 0.9em;
+		font-size: 1.7em;
+		margin: 0 0.25em 0 0.25em;
+	}
+</style>
+
+<body class="is-preload">
+	<!-- Wrapper-->
+	<div id="wrapper">
+		<!-- Nav -->
+		<nav id="nav">
+			<a href="index.html" class="icon solid fa-home"><span>Home</span></a>
+			<a href="index.html#work" class="icon solid fa-laptop-code" id="work"><span>Projects</span></a>
+			<a href="index.html#aboutme" class="icon solid fa-user-ninja"><span>About Me</span></a>
+			<a href="/resources/Lucy_Lesire_Curriculum_Vitae.pdf" class="icon solid fa-file-download"><span>CV</span></a>
+			<a href="mailto: Lucy.lesire@outlook.com" class="icon solid fa-envelope"><span>Contact</span></a>
+		</nav>
+        <div id="main">
+			<!-- #region Tune Runner -->
+			<article id="TuneRunner" class="panel" style="font-family: 'Quicksand'; font-size: 20px;">
+				<header id="logo" style="text-align: center;">
+					<h1
+						style="font-family: 'Arvo'; letter-spacing: 5px; font-weight: 700; color: #ed786a; text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);">
+						Melody Lane</h1><br>
+					<h4>Run on the melodies</h4> 
+					<br>
+					<nav id="nav">
+						<a href="https://github.com/LucyLesire/TuneRunnerPrototype" style="color: #ed786a; vertical-align: middle; opacity: 1;" id="navLink"
+						class="icon solid fa-code"></a><br><br>
+					</nav>
+					
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/tvcxjoq6UL8"
+						title="Melody Lane" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe> <br>
+				</header>
+				<div class="row gtr-150" style="font-family: 'Quicksand';">
+					<div class="col-4 col-12-medium">
+						<section id="sidebar" style="font-size: 20px;">
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Tune Runner</h2>
+							
+							<p>For the course Game Mechanics, we had to make a game around 2 random keywords, mine were "Melody" and "Countdown". 
+							<br><br>After some brainstorming, I came up with a music beat sync game where the goal is the move on the beat, whilest making sure you don't run out of time.	
+							All beats are generated, allowing any song the player wants to be playable.
+						</p>						
+						</section>
+					</div>
+					<div class="col-8 col-12-medium"
+						style="font-size: 18px; font-family: 'Quicksand'; text-align:justify;">
+						<div style="padding-top: 25px; padding-bottom: 25px;">
+							<img src="images/TuneRunner1.gif" class="image fit"
+								style="max-width: 100%; max-height: 100%;" alt="Melody Lane Main">
+						</div>
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;">
+					<div class="col-4 col-12-medium">
+						<!-- Sidebar -->
+						<section id="sidebar">
+							<section>
+							<img src="images/MelodyLaneHit.gif" alt="Melody Lane 1" class="image fit"
+								style="max-width: 100%; max-height: 100%;">
+							<p>Hitting Beats</p>
+							<img src="images/MelodyLaneDie.gif" alt="Melody Lane 2" class="image fit" 
+							style="max-width: 100%; max-height: 100%;">
+							<p>Missing beats</p>
+							<img src="images/MelodyLaneSlow.gif" alt="Melody Lane 3" class="image fit" 
+							style="max-width: 100%; max-height: 100%;">
+							<p>Slow Powerup</p>
+							</section>
+						</section>
+
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<!-- Content -->
+						<section id="content" style="font-size: 20px;">
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Prototype</h2>
+							<p>We had to work in the Unreal Engine because the objective of this course was making us familiar with The Unreal Engine and C++ in Unreal.
+							<br><br>My goal was ofcourse to have a full prototype around my two keywords, Melody and Countdown. 
+								Run on the beat until your time runs out.						
+								During the game you you need to hit the beats (on the music), by pressing space when running over them. 
+								In the meanwhile a countdown ticks down, when it hits 0, the game is over. 
+								During the game you can gain time by hitting beats, and will lose time by missing beats and hitting obstacles.
+							<br><br> The game also makes use of a beat generator that samples a song and pulls out the most prominent beats in 3 volumes high, middle and low.
+								</p>
+							
+							<ul aria-label="To make this prototype I implemented the following things:">
+								<li>Procedural spawning of beats, that are spawned upon beats of the music</li>
+								<li>Turning music and sound waves into beats.</li>
+								<li>Collision detections between player and beats.</li>
+								<li>Implementing of powerups that slow down and speed up time.</li>
+								<li>Implementing powerups that allow you to move on all lanes at the same time and automatically activate beats</li>
+								<li>Simple movement between lanes.</li>
+								<li>Music that plays through the game.</li>
+								<li>HUD that shows countdown clock.</li>
+							</ul>
+							</p>
+						</section>
+					</div>
+				</div>
+			</article>
+			<!-- #endregion -->
+        </div>
+		<!-- #region Footer -->
+		<!-- Footer -->
+		<div id="footer">
+			<ul id="nav">
+				<a href="mailto: Lucy.lesire@outlook.com" style="text-decoration:none; border: 0px;"
+					class="icon solid fa-envelope"><span>Mail</span></a>
+				<a href="https://www.linkedin.com/in/lucy-lesire-586a7a238/"
+					class="icon brands fa-linkedin"><span>LinkedIn</span></a>
+				<a href="https://flowerxqueen.itch.io" class="icon brands fa-itch-io"><span>Itch</span></a>
+				<a href="https://github.com/LucyLesire" class="icon brands fa-github"><span>Github</span></a>
+				<a href="/resources/Lucy_Lesire_Curriculum_Vitae.pdf"
+					class="icon solid fa-file-download"><span>CV</span></a>
+				<a href="callto: +32471903948" class="icon solid fa-phone"><span>+32471903948</span></a>
+				</p>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Lucy Lesire.</li>
+			</ul>
+		</div>
+		<!-- #endregion -->
+    </div>
+    	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

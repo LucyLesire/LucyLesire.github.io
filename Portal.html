@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Portfolio Lucy Lesire</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/main2.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>$(document).ready(function()
+	{
+		$("nav a").removeClass("active")
+        $('#' + 'work').addClass("active");
+	});
+	</script>
+</head>
+<style>
+	#navLink {
+		width: 0.5em;
+		height: 0.5em;
+		line-height: 0.9em;
+		font-size: 1.7em;
+		margin: 0 0.25em 0 0.25em;
+	}
+</style>
+
+<body class="is-preload">
+	<!-- Wrapper-->
+	<div id="wrapper">
+		<!-- Nav -->
+		<nav id="nav">
+			<a href="index.html" class="icon solid fa-home"><span>Home</span></a>
+			<a href="index.html#work" class="icon solid fa-laptop-code" id="work"><span>Projects</span></a>
+			<a href="index.html#aboutme" class="icon solid fa-user-ninja"><span>About Me</span></a>
+			<a href="/resources/Lucy_Lesire_Curriculum_Vitae.pdf" class="icon solid fa-file-download"><span>CV</span></a>
+			<a href="mailto: Lucy.lesire@outlook.com" class="icon solid fa-envelope"><span>Contact</span></a>
+		</nav>
+        <div id="main">
+
+			<!--#region Portal -->
+			<!--Portal-->
+			<article id="portal" class="panel" style="font-family: 'Quicksand'; font-size: 20px;">
+				<header id="logo" style="text-align: center; letter-spacing: 5px;">
+					<h1
+						style="font-family: 'Arvo'; font-weight: 700; color: #ed786a; text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);">
+						Portal Remake</h1><br>
+					<h4>Overlord Edition</h4> <br>
+					<a href="https://github.com/LucyLesire/PortalOverlord" style="color: #ed786a;" id="navLink"
+						class="icon solid fa-code"></a><br><br>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ZPVH1YkFSA0"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</header>
+				<div class="row gtr-150" style="font-family: 'Quicksand';">
+					<div class="col-4 col-12-medium">
+						<section id="sidebar" style="font-size: 20px;">
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Portal Remake</h2>
+							<p>For the course, Graphics Programming 2, we had to write a game engine with a focus on
+								rendering in C++.
+								<br>To test the engine, I wrote a simple version of Portal in it that makes use of
+								Render Textures to handle the portals.
+								<br>The game also allowed me to test a variety of other features like Animations, Amient
+								Occlusion, Custom Shaders and more.
+							</p>
+						</section>
+					</div>
+					<div class="col-8 col-12-medium"
+						style="font-size: 18px; font-family: 'Quicksand'; text-align:justify;">
+						<div style="padding-top: 25px; padding-bottom: 25px;">
+							<img src="images/PortalGif1.gif" class="image fit"
+								style="max-width: 100%; max-height: 100%;" alt="Fruut Wars Action">
+						</div>
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;">
+					<div class="col-4 col-12-medium">
+						<!-- Sidebar -->
+						<section id="sidebar">
+							<section>
+								<img src="images/PortalsMain.gif" alt="Portal Prototype Unity" class="image fit"
+									style="max-width: 100%; max-height: 100%;">
+								<p>Unity Prototype</p>
+								<img src="images/PortalGif2.gif" class="image fit"
+									style="max-width: 100%; max-height: 100%;" alt="View through portal">
+								<p>View through a portal</p>
+								<img src="images/PortalGif3.gif" alt="Teleportation" class="image fit"
+									style="max-width: 100%; max-height: 100%;">
+								<p>Portal Teleportation</p>
+								<img src="images/PortalGif4.gif" alt="Portal shooting" class="image fit"
+									style="max-width: 100%; max-height: 100%;">
+								<p>Portal Shooting</p>
+							</section>
+						</section>
+
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<!-- Content -->
+						<section id="content" style="font-size: 20px;">
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Overlord Engine</h2>
+							The basis for our was engine created by our teachers Thomas Goussaert and Mathieu Dellaere.
+							<ul aria-label="However, we still had to write and implement the following features:">
+								<li>Animations</li>
+								<li>Ambient Occlusion</li>
+								<li>Font Rendering & Text Rendering</li>
+								<li>Geometry Shaders & Texture Shaders</li>
+								<li>Particles</li>
+								<li>Picking</li>
+								<li>Post-Processing</li>
+								<li>Shadow Mapping</li>
+								<li>Skinning</li>
+							</ul>
+						</section>
+
+						<section>
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Portal</h2>
+							To remake portal I had to create a system that allowed me to link portals together, move &
+							render portal cameras correctly and include teleportation.
+							<br>The engine has 4 different draw loops: 1. The Shadow Draw, 2. The Main Draw, 3. The
+							Portal Draw (everything inside a portal), 4. The Post-Processing Draw.
+							<br>During the portal draw I redraw my scene from the perspectives of both camera's via
+							render textures, allowing for the illusion of portals. These cameras are positioned and
+							rotated correctly before the draw happens in the Update.
+							<br><br>I finished this project in 4 months, 1 of which was working on the game and 3 months
+							on the engine. I worked roughly 10 hours a week on this project.
+							</p>
+						</section>
+
+						<section>
+							<ul aria-label="Credits to:">
+								<li>Sebatian Lague <a href="https://youtu.be/cWpFZbjtSQg">Coding Adventure: Portals</a>
+								</li>
+								<li>Daniel Illet <a
+										href="https://danielilett.com/2019-12-14-tut4-2-portal-rendering/">Stencil Based
+										Portals</a></li>
+								<li>Thomas Goussaert & Mathieu Dellaere (Teachers at DAE - Howest) </li>
+							</ul>
+						</section>
+					</div>
+				</div>
+				<hr>
+				</hr>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;">
+					<div class="col-4 col-12-medium">
+						<section>
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Progress Shots</h2>
+						</section>
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<section>
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">My Experiences</h2>
+						</section>
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px; margin-bottom: 2.5em;">
+					<div class="col-4 col-12-medium">
+						<section>
+							<img src="images/First_PortalTest.png" style="max-width: 100%;" alt="Portal 1"
+								class="image fit">
+							<p>Unity: Simple Portals</p>
+						</section>
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<section id="content">
+							<p style="text-align: justify; vertical-align:middle;">
+								I started my project with a prototype in Unity. The first thing I did was creating a
+								simple screen that had a camera linked to it. When the player moves, the portal-camera
+								moves in the same way, except relative to it's portal rather than to the player.
+								With this working I made sure that what the portal-camera saw was displayed onto a
+								second screen that worked in the same way. </p>
+						</section>
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px; margin-bottom: 2.5em;">
+					<div class="col-4 col-12-medium">
+						<section>
+							<img src="images/Second_PortalTest.png" style="max-width: 100%;" alt="Portal 2"
+								class="image fit">
+							<p>Unity: Mapped Portals</p>
+						</section>
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<section id="content">
+							<p>The next thing I had to was map the camera correctly to the screen, by using a shader.
+								The shader took what the camera saw and cut out the parts outside of the portal, leaving
+								the parts inside of the portal and creating the illusion of a portal.</p>
+						</section>
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px; margin-bottom: 2.5em;">
+					<div class="col-4 col-12-medium">
+						<section>
+							<img src="images/PortalRecursion.gif" style="max-width: 100%;" alt="Portal 3"
+								class="image fit">
+							<p>Unity: Teleporting</p>
+						</section>
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<section id="content">
+							<p>The final thing I did in my prototype was implementing teleportation.
+								To do so I teleported (moved) the player to the other portal once it's camera passed the
+								initial portal's screen (by using the dot product between the camera and the portal).
+								After I also made sure that the player was rotated along the forward of the second
+								screen. That way they can succesfully walk out of the portal.</p>
+						</section>
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px; margin-bottom: 2.5em;">
+					<div class="col-4 col-12-medium">
+						<section>
+							<img src="images/PortalGif2.gif" style="max-width: 100%;" alt="Portal 4" class="image fit">
+							<p>Overlord: Mapped Portals</p>
+						</section>
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<section id="content">
+							<p>With our prototype out of the way, it was time for me to translate all of it into the
+								custom Overlord Engine.
+								Since Overlord is not a Visual Engine, this was not an easy task.
+								I started in the same way as my prototype and created two screens with cameras that move
+								in the same way as the player, but relative to their portals.</p>
+						</section>
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px; margin-bottom: 2.5em;">
+					<div class="col-4 col-12-medium">
+						<section>
+							<img src="images/PortalGif3.gif" style="max-width: 100%;" alt="Portal 5" class="image fit">
+							<p>Overlord: Shooting!</p>
+						</section>
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<section id="content">
+							<p>After the camera's were working, I started to work on shooting the portals.
+								To do this I used a simple raycast and some rotation math to make sure the portal
+								followed the normal of the surface it was one.
+								I managed to make this work in no time.</p>
+						</section>
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px; margin-bottom: 2.5em;">
+					<div class="col-4 col-12-medium">
+						<section>
+							<img src="images/PortalGif4.gif" style="max-width: 100%;" alt="Fruut Wars 6"
+								class="image fit">
+							<p>Overlord: Teleporting</p>
+						</section>
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<section id="content">
+							<p>My dreaded enemy this project was the teleportation, implementing this into Overlord was
+								quite tough, but with a bunch of math I managed to do it.
+								First I check then if the player crossed the portal (via the dot product).
+								Next I teleport (move) the traveller to the other portal.
+								Finally I rotate the traveller so that it is facing outwards relative to the portal they
+								just travelled to (the portal is behind them).
+						</section>
+					</div>
+				</div>
+			</article>
+			<!--#endregion-->
+        </div>
+		<!-- #region Footer -->
+		<!-- Footer -->
+		<div id="footer">
+			<ul id="nav">
+				<a href="mailto: Lucy.lesire@outlook.com" style="text-decoration:none; border: 0px;"
+					class="icon solid fa-envelope"><span>Mail</span></a>
+				<a href="https://www.linkedin.com/in/lucy-lesire-586a7a238/"
+					class="icon brands fa-linkedin"><span>LinkedIn</span></a>
+				<a href="https://flowerxqueen.itch.io" class="icon brands fa-itch-io"><span>Itch</span></a>
+				<a href="https://github.com/LucyLesire" class="icon brands fa-github"><span>Github</span></a>
+				<a href="/resources/Lucy_Lesire_Curriculum_Vitae.pdf"
+					class="icon solid fa-file-download"><span>CV</span></a>
+				<a href="callto: +32471903948" class="icon solid fa-phone"><span>+32471903948</span></a>
+				</p>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Lucy Lesire.</li>
+			</ul>
+		</div>
+		<!-- #endregion -->
+    </div>
+    	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

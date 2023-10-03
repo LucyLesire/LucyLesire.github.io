@@ -84,7 +84,7 @@
 						.addClass('active');
 
 				// Reset scroll.
-					$window.scrollTop(0);
+					$window.scrollTop(-50);
 
 			})();
 
@@ -142,7 +142,7 @@
 								.css('min-height', $panel.outerHeight() + 'px');
 
 						// Reset scroll.
-							$window.scrollTop(0);
+							$window.scrollTop(-50);
 
 						// Delay.
 							window.setTimeout(function() {

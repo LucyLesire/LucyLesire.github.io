@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Portfolio Lucy Lesire</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/main2.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>$(document).ready(function()
+	{
+		$("nav a").removeClass("active")
+        $('#' + 'work').addClass("active");
+	});
+	</script>
+</head>
+<style>
+	#navLink {
+		width: 0.5em;
+		height: 0.5em;
+		line-height: 0.9em;
+		font-size: 1.7em;
+		margin: 0 0.25em 0 0.25em;
+	}
+</style>
+
+<body class="is-preload">
+	<!-- Wrapper-->
+	<div id="wrapper">
+		<!-- Nav -->
+		<nav id="nav">
+			<a href="index.html" class="icon solid fa-home"><span>Home</span></a>
+			<a href="index.html#work" class="icon solid fa-laptop-code" id="work"><span>Projects</span></a>
+			<a href="index.html#aboutme" class="icon solid fa-user-ninja"><span>About Me</span></a>
+			<a href="/resources/Lucy_Lesire_Curriculum_Vitae.pdf" class="icon solid fa-file-download"><span>CV</span></a>
+			<a href="mailto: Lucy.lesire@outlook.com" class="icon solid fa-envelope"><span>Contact</span></a>
+		</nav>
+        <div id="main">
+			<!-- #region Excape -->
+			<article id="Excape" class="panel" style="font-family: 'Quicksand'; font-size: 20px;">
+				<header id="logo" style="text-align: center;">
+					<h1
+						style="font-family: 'Arvo'; letter-spacing: 5px; font-weight: 700; color: #ed786a; text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);">
+						Excape</h1><br>
+					<h4>Dismember Zombies</h4> 
+					<br>
+					<nav id="nav">
+						<a href="https://github.com/LucyLesire/ExcapePrototype" style="color: #ed786a; vertical-align: middle; opacity: 1;" id="navLink"
+						class="icon solid fa-code"></a><br><br>
+					</nav>
+					
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/HL_CqKOwLQo"
+						title="Excape Prototype" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe> <br>
+				</header>
+				<div class="row gtr-150" style="font-family: 'Quicksand';">
+					<div class="col-4 col-12-medium">
+						<section id="sidebar" style="font-size: 20px;">
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Excape</h2>
+							<p>For the course Game Mechanics, we had to make a game around 2 random keywords, mine were "Exile" and "Dismember". 
+							<br>After some brainstorming, I came up with a survival game where the goal is the dismember your enemies.</br>	
+							<br>Since this is only a prototype the dismembering is done by removing the arms or legs of a zombie, with a laser or an axe.</br>
+							</p>						
+						</section>
+					</div>
+					<div class="col-8 col-12-medium"
+						style="font-size: 18px; font-family: 'Quicksand'; text-align:justify;">
+						<div style="padding-top: 25px; padding-bottom: 25px;">
+							<img src="images/MainExcape.gif" class="image fit"
+								style="max-width: 100%; max-height: 100%;" alt="Fruut Wars Action">
+						</div>
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;">
+					<div class="col-4 col-12-medium">
+						<!-- Sidebar -->
+						<section id="sidebar">
+							<section>
+							<img src="images/ProceduralExcape.gif" alt="Excape 1" class="image fit"
+								style="max-width: 100%; max-height: 100%;">
+							<p>Endless procedural waves</p>
+							<img src="images/TutorialExcape.gif" alt="Excape 2" class="image fit" 
+							style="max-width: 100%; max-height: 100%;">
+							<p>Tutorial</p>
+							<img src="images/ExcapePickups.png" alt="Excape Pickups" class="image fit" 
+							style="max-width: 100%; max-height: 100%;">
+							<p>Loot</p>
+							</section>
+						</section>
+
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<!-- Content -->
+						<section id="content" style="font-size: 20px;">
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Prototype</h2>
+							<p>We had to work in the Unity Engine because the objective of this course was making us familiar with The Unity Engine and C#.<p>
+							<p>My goal was ofcourse to have a full prototype around my two keywords, Dismember and Exile. Dismember zombies to escape your exile.</p>
+							During the game you can use your laser to shoot at the zombies, if a limb of a zombie loses all of its health, it will be dismembered. 
+							However, whilest using the laser you also have to pay attention to your battery, using the laser drain battery and when empty a refill is needed.
+							As a last resort, the axe can also be used to dismember zombies from a melee range.
+							<br><br>
+							<ul aria-label="To make this prototype I implemented the following things:">
+								<li>Procedural spawning of enemies in waves, with increased difficulty per wave. Enemies will only spawn to the closest spawn points around you.</li>
+								<li>Limbs that have health and dissapear on 0HP.</li>
+								<li>A Laser gun that uses raycasts to calculate where it is shooting. </li>
+								<li>An axe that uses raycast to calculate if you hit a limb. </li>
+								<li>Pickups that allow you to increase health, ammo and open doors (using raycasts).</li>
+								<li>Sounds that play on certain events, aswel as music that plays throughout the game. Both can be turned up or down using the settings menu</li>
+								<li>HUD that shows ammo and health.</li>
+							</ul>
+							</p>
+						</section>
+					</div>
+				</div>
+			</article>
+			<!-- #endregion -->
+        </div>
+		<!-- #region Footer -->
+		<!-- Footer -->
+		<div id="footer">
+			<ul id="nav">
+				<a href="mailto: Lucy.lesire@outlook.com" style="text-decoration:none; border: 0px;"
+					class="icon solid fa-envelope"><span>Mail</span></a>
+				<a href="https://www.linkedin.com/in/lucy-lesire-586a7a238/"
+					class="icon brands fa-linkedin"><span>LinkedIn</span></a>
+				<a href="https://flowerxqueen.itch.io" class="icon brands fa-itch-io"><span>Itch</span></a>
+				<a href="https://github.com/LucyLesire" class="icon brands fa-github"><span>Github</span></a>
+				<a href="/resources/Lucy_Lesire_Curriculum_Vitae.pdf"
+					class="icon solid fa-file-download"><span>CV</span></a>
+				<a href="callto: +32471903948" class="icon solid fa-phone"><span>+32471903948</span></a>
+				</p>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Lucy Lesire.</li>
+			</ul>
+		</div>
+		<!-- #endregion -->
+    </div>
+    	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
