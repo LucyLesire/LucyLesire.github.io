@@ -64,7 +64,7 @@
 					<div class="col-4 col-12-medium">
 						<section id="sidebar" style="font-size: 20px;">
 							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Big Shots VR</h2>
-							<p>Big Shots is the first commercial game I have worked on. The game is a VR Roguelite where you play as a big mech, killing big bug. 
+							<p>Big Shots is the first commercial game I have worked on, a VR Roguelite where you play as a big mech, killing big bugs. 
 								The player has to defeat waves of onslaught by upgrading their weapons and efficiently using their ultimates.
 								 <br><br>The game has been released on PlayStation VR2, Meta VR and Steam. The game is developed by AlterEyes, where I work as a programmer.
 							</p>
@@ -92,7 +92,7 @@
 								<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">I Learned</h2>
 								<p>Since this is my first commercial game with a company, I learned a lot of new things.
 									<ul aria-label="I learned the following:">
-										<li>How to make a VR game.</li>
+										<li>How to make a VR game</li>
 										<li>How to make a Networked game</li>
 										<li>How to make a PlayStation game that complies to the PlayStation requirements</li>
 										<li>How to implement A* into a Unity project</li>
@@ -108,22 +108,22 @@
 						<!-- Content -->
 						<section id="content" style="font-size: 20px;">
 							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">My Role</h2>
-							<p>My role in the project lied mainly on AI programming, as that is my expertise. <br> I implemented the behaviours of all 11 enemies and make them networked correctly.
+							<p>My role in the project was mainly AI programming, as that is my expertise. <br> I implemented the behaviours of all 11 enemies and make them networked correctly.
 								I also worked on the A* Point Graph, Behaviour Tree- and wave spawning systems.
 								<br>Other than AI programming, I also put a lot of time into the PlayStation port and implementing the PlayStation requirements.
 							</p>
 							<ul aria-label="In detail, my work contained the following:">
 								<li>Creating the behaviours of all 11 enemies (see below for more information)</li>
 								<li>Improvements on the custom A* Point Graphs for crawling and flying enemies.</li>
-								<li>Improvement on the custom Behaviour Tree and Blackboard systems.</li>
+								<li>Improvement on the custom Behaviour Tree and Blackboard systems</li>
 								<li>Creating the wave- and spawnpoint systems</li>
-								<li>Creating multiple tools for navmesh generation and wave systems.</li>
-								<li>Creating enemy difficulty scaling.</li>
+								<li>Creating multiple tools for navmesh generation and wave systems</li>
+								<li>Creating enemy difficulty scaling and modifiers</li>
 								<li>Creating multiple enemy related systems (e.g. relocation-, phase-, targeting and status effect systems)</li>
-								<li>Implementing most PlayStation requirements.</li>
+								<li>Implementing most PlayStation requirements</li>
 								<li>Implementing Unity Cloud Save- and Friends systems</li>
 								<li>Implementing Photon Fusion Networking on all my multiplayer behaviours and systems</li>
-								<li>Other minor AI and gameplay programming related tasks.</li>
+								<li>Other minor AI and gameplay programming related tasks</li>
 							</ul>
 						</section>
 
@@ -154,8 +154,8 @@
 					<div class="col-8 col-12-medium imp-medium">
 						<section id="content">
 							<p style="text-align: justify; vertical-align:middle;">The grunt is a simple but fearsome foe, they attack by slashing at their target. Even though they don't do much damage, they come in dangerous numbers.
-							<br><br> For the grunt I had to implement the main 3 behaviours, "Targeting, Moving and Attacking". I also had to put my behaviours together in a custom Behaviour Tree and make the movement work with the custom A* point graph that allows these critters to walk on walls. 
-							<br><br>The most difficult thing I had to do for the grunt was setting up all base behaviours and blackboard systems, these I would later use for other enemies. </p>
+							<br><br> For the grunt I had to implement the main 3 behaviours: Targeting, Moving and Attacking. I also had to put my behaviours together in a custom Behaviour Tree and make the movement work with the custom A* point graph that allows these critters to walk on walls. 
+							<br><br>The most difficult thing I had to do for the grunt was setting up all base behaviours and blackboard systems, these I would later reuse for other enemies. </p>
 						</section>
 					</div>
 				</div>
@@ -169,9 +169,9 @@
 					</div>
 					<div class="col-8 col-12-medium imp-medium">
 						<section id="content">
-							<p>The Spewer is a more complex enemy, they use their range to spew acid spit at their targets. 
-								<br><br> For the Spewer I had to make my first real attacking behaviour script, I made this script in a way so that it can be expanded upon and reused for other enemies. I also implemented and refined the basic behaviours I had made for the Grunt.
-								<br><br> The most difficult thing I had to do for the Spewer was the relocation behaviour, this behaviour would allow the Spewers to find new attacking positions when their target goes out of sight.
+							<p>The Spewer is a more complex enemy, using their range to spew acid spit at their targets. 
+								<br><br> For the Spewer I had to make my first real attacking behaviour script. I made this script in a way so that it can be expanded upon and reused for other enemies. I also implemented and refined the basic behaviours I had made for the Grunt.
+								<br><br> The most difficult thing I had to do for the Spewer was the relocation behaviour. This behaviour would allow the Spewers to find new attacking positions when their target goes out of sight.
 							</p>
 						</section>
 					</div>
@@ -186,8 +186,8 @@
 					<div class="col-8 col-12-medium imp-medium">
 						<section id="content">
 							<p>The Flyer is the first enemy that is completly different from the others. This is because they fly, they are quick, nimble and annoying to deal with, much like mosquitos.
-								<br><br> For the Flyer I had to implement a whole new moving system to allow the Flyers to use the A* Flying Point Graph. I also implemented the relocating behaviour for the Flyer.
-								I also expanded on the Spewers ranged attack to make the Flyers ranged attack, similair but distinct.
+								<br><br> For the Flyer I had to implement a whole new moving system to allow the Flyers to use the A* Flying Point Graph.
+								I expanded on the Spewers ranged attack to make the Flyers ranged attack similair but distinct and I created the relocating behaviour for the Flyer.
 								<br><br>The most difficult thing I had to do for the Flyer was creating the ZigZagging behaviour. The difficulty mainly came from the networking side of it.
 							</p>
 						</section>
@@ -203,9 +203,9 @@
 					</div>
 					<div class="col-8 col-12-medium imp-medium">
 						<section id="content">
-							<p>The Mudmuncher is one of the most annoying bugs out there, they hide under the sand and wait for the perfect moment to strike their target.
-								<br><br> For the Mudmunchers I had to implement new behaviours that would allow them to be hidden from the player when moving and only being targetable when they attack. I also had to design their attack from the ground up, it mimics their movement and is able to go up slopes.
-								<br><br> The most difficult thing I had to do for the Mudmuncher was their targeting, due to the nature of their attack it was hard to figure out if it would hit. They also had to attack frequent enough so they wouldn't become to annoying.
+							<p>The MudMuncher is one of the most annoying bugs out there. They hide under the sand and wait for the perfect moment to strike their target.
+								<br><br> For the MudMunchers I had to implement new behaviours that would allow them to be hidden from the player when moving and only being targetable when they attack. I had to design their attack from the ground up, it mimics their movement and is able to go up slopes.
+								<br><br> The most difficult thing I had to do for the MudMuncher was their targeting, due to the nature of their attack it was hard to figure out if it could hit. They also had to attack frequent enough so they wouldn't be too annoying.
 							</p>
 						</section>
 					</div>
@@ -220,9 +220,9 @@
 					</div>
 					<div class="col-8 col-12-medium imp-medium">
 						<section id="content">
-							<p>The Spinner is fast, very fast, as soon as they see you they will spin up and launch themselves at you, causing a big BOOM.
-								<br><br> For the Spinner I had to refine the movement behaviour as they move in two ways (walking and spinning), both with different speeds and animations.
-								<br><br> The most difficult thing I had to do for the Spinner was refining the pathfinding, since the spinners moved very fast, it would become very apparent if they had some weird "kinks" in their pathfinding. I had to smooth the path in an optimal way that would still account for obstacles but also make it go direct towards the player.
+							<p>The Spinner is fast, very fast. Once they see you they will spin up and launch themselves at you, causing a big BOOM.
+								<br><br> For the Spinner I had to refine the movement behaviour as they move in two ways: walking and spinning, both have different speeds and animations.
+								<br><br> The most difficult thing I had to do for the Spinner was refining the pathfinding. Since the spinners moved very fast, it would become very apparent if they had some weird "kinks" in their pathfinding. I had to smooth the path in an optimal way that would still account for obstacles but also make it go direct towards the player.
 							</p>
 						</section>
 					</div>
@@ -237,9 +237,9 @@
 					</div>
 					<div class="col-8 col-12-medium imp-medium">
 						<section id="content">
-							<p>The Tank is a strudy foe, protecting other bugs with their massive shield and stomping on you with their ram. Taking one out is priority number 1.
-							<br><br> For the Tank I had to do a lot of work, since they have 2 unique behaviours, the Shield and the Ram. For the Ram behaviour I had to make a new custom move behaviour that would use a different pathfinding system.
-							<br><br> The most difficult thing I made for the Tank (and all enemies) was the Shielding behaviour. When the tank shields, a barrier pops up around him, blocking bullets until it is destroyed. The shield also gives other nearby enemies a shield that regenerates as long as the Tanks shield is active.</p>
+							<p>The Tank is a sturdy foe, protecting other bugs with their massive shield and stomping on you with their ram. Taking a tank out is priority number #1.
+							<br><br> For the Tank I had to do a lot of work, since they have 2 unique behaviours, the Shield and the Ram. For the Ram behaviour, I had to make a new custom move behaviour that would use a different pathfinding system.
+							<br><br> The most difficult thing I made for the Tank (and all enemies) was the Shielding behaviour. When the tank shields, a barrier pops up around them, blocking bullets until it is destroyed. The shield also gives other nearby enemies a shield that regenerates as long as the Tanks shield is active.</p>
 						</section>
 					</div>
 				</div>
@@ -253,10 +253,10 @@
 					</div>
 					<div class="col-8 col-12-medium imp-medium">
 						<section id="content">
-							<p>The Minibosses are powerful bugs that are an evolved form of some of the basic bugs, each with a more powerful attack.
-							<br><br> For The Minibosses I made a few new systems and behaviours. Including a Phase System that would allow mini bosses to get stronger the more damage they take, causing their phase to change.
-							I also made a new relocation system that allows bosses to rotate around the map.
-							<br><br> The most difficult part of the Minibosses was making their attacks, since there were 4 minibosses, I had to make 4 new attacks for them, ranging from a swarm of stingers to stalgmites to a laser! 
+							<p>The Mini Bosses are powerful bugs that are an evolved form of some of the basic bugs, each with a more powerful attack.
+							<br><br> For The Mini Bosses I made a few new systems and behaviours. Including a Phase System that would allow Mini Bosses to get stronger the more damage they take, causing their phase to change.
+							I also made a new relocation system that allows bosses to rotate around the map without walking.
+							<br><br> The most difficult part of the Minibosses was making their attacks. Since there are 4 minibosses, I had to make 4 new attacks for them, ranging from a swarm of stingers to stalgmites to a laser! 
 							</p>
 						</section>
 					</div>
@@ -271,8 +271,8 @@
 						<div class="col-8 col-12-medium imp-medium">
 							<section id="content">
 								<p>The Queen is the scariest of them all, the big foe that you have been working towards, defeat her and this will all be over.
-								<br><br> For Queen I had to make a whole new behaviour for attacking and had to improve on the Phase System. The queen would start spawning minibosses in her phases, instead of upgrading her attack.
-								<br><br> The most difficult part of the Queen was tying everything together, she uses all the attacks of the minibosses as well as two completly new attacks. To make sure there were no repeat attacks with the minibosses and herself, I had to implement a sequencer in her behaviour tree.
+								<br><br> For the Queen I had to make a whole new behaviour for attacking and had to improve on the Phase System. The queen would start spawning minibosses in her phases, instead of upgrading her attack.
+								<br><br> The most difficult part of the Queen was tying everything together. She uses all the attacks of the minibosses as well as two compeletly new attacks. To make sure there were no repeat attacks with the minibosses and herself, I had to implement a sequencer in her behaviour tree.
 								</p>
 							</section>
 						</div>
