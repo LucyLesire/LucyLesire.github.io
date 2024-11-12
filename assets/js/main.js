@@ -59,31 +59,38 @@
 
 				// Get panel, link.
 					if (window.location.hash) {
-
 				 		$panel = $panels.filter(window.location.hash);
 						$link = $nav_links.filter('[href="' + window.location.hash + '"]');
-
 					}
 
 				// No panel/link? Default to first.
 					if (!$panel
-					||	$panel.length == 0) {
+					||	$panel.length == 0) 
+					{
+						//This code is ugly, ignore it
+						var $panel2;
+						$panel = $panels[0];
+						$panel2 = $panels[1];
 
-						$panel = $panels.first();
-						$link = $nav_links.first();
-
-					}
-
-				// Deactivate all panels except this one.
-					$panels.not($panel)
+						$panels.not($panel).not($panel2)
 						.addClass('inactive')
 						.hide();
+					
 
-				// Activate link.
-					$link
-						.addClass('active');
+						$nav_links.first().addClass('active');
+						$nav_links.first().addClass('active');
+					}
+					else
+					{
+						$panels.not($panel)
+							.addClass('inactive')
+							.hide();
 
-				// Reset scroll.
+						$link
+							.addClass('active');
+					}
+
+					// Reset scroll.
 					$window.scrollTop(-50);
 
 			})();
