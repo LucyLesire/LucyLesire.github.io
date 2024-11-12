@@ -21,6 +21,47 @@
 		margin: 0 0.25em 0 0.25em;
 	}
 </style>
+<style>
+   .typing-container {
+      font-family: "Arvo"; /* Monospaced font for the typing effect */
+      font-size: 18px;
+      display: inline-flex;
+      position: relative;
+      white-space: nowrap;
+	  justify-content: center;    /* Center content horizontally */
+      align-items: center;
+      overflow: auto; /* Prevents overflow while typing */
+	  height: 42px;
+	  max-width:95%;
+    }
+	.typing-container::after {
+      content: ''; /* Creates the pseudo-element */
+      position: absolute;
+      right: 0px; /* Position it to the right edge of the text */
+      top: 50%; /* Vertically center it relative to the text */
+      width: 2px; /* Cursor width */
+      height: 55%; /* Control the height of the cursor (smaller height) */
+      background-color: black; /* Cursor color */
+      transform: translateY(-50%); /* Vertically center it exactly */
+      animation: blink 1s step-end infinite; /* Blinking effect */
+    }
+
+	.typing-container span {
+  margin-right: 8px; /* Offset between the last character and the cursor */
+}
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
 
 <body class="is-preload" onLoad="window.scroll(0, 0)">
 	<!-- Wrapper-->
@@ -28,8 +69,7 @@
 		<div id="overlay"></div>
 		<!-- Nav -->
 		<nav id="nav">
-			<a href="#" class="icon solid fa-home"><span>Home</span></a>
-			<a href="#work" class="icon solid fa-laptop-code"><span>Projects</span></a>
+			<a href="#work" class="icon solid fa-home"><span>Home</span></a>
 			<a href="#aboutme" class="icon solid fa-user-ninja"><span>About Me</span></a>
 			<a href="/resources/Lucy_Lesire_Curriculum_Vitae.pdf"
 				class="icon solid fa-file-download"><span>CV</span></a>
@@ -37,75 +77,79 @@
 		</nav>
 
 		<!-- Main -->
-		<div id="main">
-			<!-- #region Main -->
-			<!-- Me -->
-			<article id="home" class="panel intro">
-				<header>
-					<h1 id="logo" , style="font-family: 'Arvo';
-									font-weight: 700;
-									color: #ed786a;
-									text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
-									letter-spacing: 5px;">
-						Lucy Lesire</h1>
-					<p style="font-family: 'Arvo';">AI & Gameplay Programmer</p>
-				</header>
-				<a href="#work" class="jumplink pic">
-					<span class="arrow icon solid fa-chevron-right"></span>
-					<img src="images/me.jpg" alt="" />
-				</a>
-			</article>
-			<!-- #endregion -->
-
+		<div id="main" style="display: flexbox;">
 			<!-- #region Projects -->
 			<!-- Work -->
-			<article id="work" class="panel">
-				<header>
-					<h1 id="logo" , style="font-family: 'Arvo';
+			<!-- <article> -->
+				<br><br>
+				<article id="work" class="panel intro" style="max-width: 85%; height: 450px;">
+						<header>
+							<h1 id="logo" , style="font-family: 'Arvo'; 
+										font-weight: 700;
+										color: #ed786a;
+										text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
+										letter-spacing: 5px;">
+							Lucy Lesire</h1>
+							<p style="font-family: 'Arvo';">AI & Gameplay Programmer</p>
+							<div style="font-family: 'Arvo';" class="typing-container">
+								<p>Loves <span id="typing-text"></span></p>
+							</div>
+						</header>
+						<div class="pic">
+							<img src="images/me (2).jpg" class="image fit" alt="" />
+						</div>
+				</article>
+
+				<article id="work" class="panel">
+					<header>
+						<h1 id="logo" , style="font-family: 'Arvo';
 									font-weight: 700;
 									color: #ed786a;
 									text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 									text-align: center;
 									letter-spacing: 5px;">
-						My Projects</h1><br>
-				</header>
-				<section>
-					<div class="row" style="text-align: center; font-family: 'Quicksand';">
-						<div class="col-4 col-6-medium col-12-small">
-							<a href="BigShots.html" class="image fit"><img src="images/BigShots_Logo.png" alt=""></a>
-							<h1 style="font-size: 37px; line-height: 150%;">Big Shots</h1>
-							<p>A co-op VR experience<br>Unity - Released Game</p>
+							My Projects</h1><br>
+					</header>
+					<section>
+						<div class="row" style="text-align: center; font-family: 'Quicksand';">
+							<div class="col-4 col-6-medium col-12-small">
+								<a href="BigShots.html" class="image fit"><img src="images/BigShots_Logo.png"
+										alt=""></a>
+								<h1 style="font-size: 37px; line-height: 150%;">Big Shots</h1>
+								<p>A co-op VR experience<br>Unity - Released Game</p>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<a href="" class="image fit"><img src="images/ColorACube.png" alt=""></a>
+								<h1 style="font-size: 37px; line-height: 150%;">Color a Cube</h1>
+								<p>A cozy VR coloring game<br>Unity - Released Game</p>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<a href="RTS.html" class="image fit"><img src="images/HeartSketchFormation.png"
+										alt=""></a>
+								<h1 style="font-size: 37px; line-height: 150%;">Sketch Formations</h1>
+								<p>Real time changes in sketch based RTS formations</p>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<a href="ProjectRewrite.html" class="image fit"><img src="images/ProjectRewriteLogo.png"
+										alt=""></a>
+								<h1 style="font-size: 37px; line-height: 150%;">Project Rewrite</h1>
+								<p>Time Travel Horror<br>Unreal Engine 5</p>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<a href="FruutWars.html" class="image fit">
+									<img src="images/LogoFruutWars.png" alt="">
+								</a>
+								<h1 style="font-size: 37px; line-height: 150%;">Fruut Wars</h1>
+								<p>Couch pvp shooter<br>Unreal Engine 4</p>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
+								<a href="Portal.html" class="image fit"><img src="images/PortalRemake.png" alt=""></a>
+								<h1 style="font-size: 37px; line-height: 150%;">Portal Remake</h1>
+								<p>The classic portal <br> C++</p>
+							</div>
 						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<a href="" class="image fit"><img src="images/ColorACube.png" alt=""></a>
-							<h1 style="font-size: 37px; line-height: 150%;">Color a Cube</h1>
-							<p>A cozy VR coloring game<br>Unity - Released Game</p>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<a href="RTS.html" class="image fit"><img src="images/HeartSketchFormation.png" alt=""></a>
-							<h1 style="font-size: 37px; line-height: 150%;">Sketch Formations</h1>
-							<p>Real time changes in sketch based RTS formations</p>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<a href="ProjectRewrite.html" class="image fit"><img src="images/ProjectRewriteLogo.png"
-									alt=""></a>
-							<h1 style="font-size: 37px; line-height: 150%;">Project Rewrite</h1>
-							<p>Time Travel Horror<br>Unreal Engine 5</p>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<a href="FruutWars.html" class="image fit">
-								<img src="images/LogoFruutWars.png" alt="">
-							</a>
-							<h1 style="font-size: 37px; line-height: 150%;">Fruut Wars</h1>
-							<p>Couch pvp shooter<br>Unreal Engine 4</p>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<a href="Portal.html" class="image fit"><img src="images/PortalRemake.png" alt=""></a>
-							<h1 style="font-size: 37px; line-height: 150%;">Portal Remake</h1>
-							<p>The classic portal <br> C++</p>
-						</div>
-					</div>
-				</section>
+					</section>
+				<!-- </article> -->
 			</article>
 			<!-- #endregion -->
 			<!-- #region About Me -->
@@ -207,6 +251,46 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	
+	<script>
+		const sentences = [
+		  "working on AI behaviours.",
+		  "making tools to speed up development.",
+		  "drinking Cola Zero."
+		];
+		let sentenceIndex = 0;
+		let charIndex = 0;
+		let isTyping = true;
+		let typingSpeed = 200; // Speed of typing (in milliseconds)
+		let backspaceSpeed = 125; // Speed of backspacing (in milliseconds)
+		const typingTextElement = document.getElementById("typing-text");
+	
+		function typeSentence() {
+		  if (charIndex < sentences[sentenceIndex].length) {
+			typingTextElement.textContent += sentences[sentenceIndex][charIndex];
+			charIndex++;
+			setTimeout(typeSentence, typingSpeed);
+		  } else {
+			// Once the sentence is typed, backspace after a delay
+			setTimeout(backspaceSentence, 1000); // 1 second pause before backspacing
+		  }
+		}
+	
+		function backspaceSentence() {
+		  if (charIndex > 0) {
+			typingTextElement.textContent = typingTextElement.textContent.slice(0, -1);
+			charIndex--;
+			setTimeout(backspaceSentence, backspaceSpeed);
+		  } else {
+			// After backspacing, switch to the next sentence
+			sentenceIndex = (sentenceIndex + 1) % sentences.length;
+			typeSentence(); // Start typing the next sentence
+		  }
+		}
+	
+		// Start the typing effect
+		typeSentence();
+	  </script>
 
 </body>
 
