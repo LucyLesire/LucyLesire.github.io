@@ -44,7 +44,7 @@
 			<!--#region Portal -->
 			<!--Portal-->
 			<article id="portal" class="panel" style="font-family: 'Quicksand'; font-size: 20px;">
-				<header id="logo" style="text-align: center; letter-spacing: 5px; outline: solid red;">
+				<header id="logo" style="text-align: center; letter-spacing: 5px;">
 					<h1
 						style="font-family: 'Arvo'; font-weight: 700; color: #ed786a; text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);">
 						Portal Remake</h1><br>
@@ -60,12 +60,10 @@
 					<div class="col-4 col-12-medium">
 						<section id="sidebar" style="font-size: 20px;">
 							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Portal Remake</h2>
-							<p>For the course, Graphics Programming 2, we had to write a game engine with a focus on
-								rendering in C++.
-								<br>To test the engine, I wrote a simple version of Portal in it that makes use of
-								Render Textures to handle the portals.
-								<br>The game also allowed me to test a variety of other features like Animations, Amient
-								Occlusion, Custom Shaders and more.
+							<p>This remake of portal was made in a custom self-written C++ game engine with a focus on
+								rendering. 
+								<br><br>I finished this project in 4 months, 1 of which was working on the game and 3 months
+								on the engine. I worked roughly 10 hours a week on this project.
 							</p>
 						</section>
 					</div>
@@ -82,12 +80,6 @@
 						<!-- Sidebar -->
 						<section id="sidebar">
 							<section>
-								<img src="images/PortalsMain.gif" alt="Portal Prototype Unity" class="image fit"
-									style="max-width: 100%; max-height: 100%;">
-								<p>Unity Prototype</p>
-								<img src="images/PortalGif2.gif" class="image fit"
-									style="max-width: 100%; max-height: 100%;" alt="View through portal">
-								<p>View through a portal</p>
 								<img src="images/PortalGif3.gif" alt="Teleportation" class="image fit"
 									style="max-width: 100%; max-height: 100%;">
 								<p>Portal Teleportation</p>
@@ -100,10 +92,30 @@
 					</div>
 					<div class="col-8 col-12-medium imp-medium">
 						<!-- Content -->
+
 						<section id="content" style="font-size: 20px;">
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">My achievements</h2>
+							<ul aria-label="In the custom engine I integrated the following features:">
+								<li>Animations and skinning</li>
+								<li>Shadow Mapping</li>
+								<li>Ambient Occlusion and Post-Processing</li>
+								<li>Font Rendering & Text Rendering</li>
+								<li>Particles</li>
+								<li>Sceen picking and UI interactions</li>
+								<li>Geometry- and Texture Shaders</li>
+							</ul>
+							<ul aria-label="For the Game I integrated the following features:">
+								<li>4 distinct draw calls to render the portals.</li>
+								<li>Portal shooting and linking system</li>
+								<li>Portal teleportation</li>
+								<li>Portal Physics transfers</li>
+							</ul>
+						</section>
+
+						<!-- <section id="content" style="font-size: 20px;">
 							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Overlord Engine</h2>
-							The basis for our was engine created by our teachers Thomas Goussaert and Mathieu Dellaere.
-							<ul aria-label="However, we still had to write and implement the following features:">
+							I made this remake of Portal in a custom C++ engine where we had to 
+							<ul aria-label="intergrate the following features:">
 								<li>Animations</li>
 								<li>Ambient Occlusion</li>
 								<li>Font Rendering & Text Rendering</li>
@@ -128,9 +140,9 @@
 							<br><br>I finished this project in 4 months, 1 of which was working on the game and 3 months
 							on the engine. I worked roughly 10 hours a week on this project.
 							</p>
-						</section>
+						</section> -->
 
-						<section>
+						<!-- <section>
 							<ul aria-label="Credits to:">
 								<li>Sebatian Lague <a href="https://youtu.be/cWpFZbjtSQg">Coding Adventure: Portals</a>
 								</li>
@@ -139,11 +151,19 @@
 										Portals</a></li>
 								<li>Thomas Goussaert & Mathieu Dellaere (Teachers at DAE - Howest) </li>
 							</ul>
+						</section> -->
+					</div>
+				</div>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;" >
+					<div class="col-12 col-12-medium" style="text-align: center;">
+						<section id="content" style="font-size: 20px;">
+							<br><br>
+							<button onclick="EnableArticles()"><span style="font-family: Quicksand; font-size: 17px;"> Want to learn about my experiences?</span></button>
 						</section>
 					</div>
 				</div>
-				<hr>
-				</hr>
+			</article>
+			<article id="Experiences" class="panel" style="font-family: 'Quicksand'; font-size: 20px;">
 				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;">
 					<div class="col-4 col-12-medium">
 						<section>
@@ -254,7 +274,7 @@
 						<section id="content">
 							<p>My dreaded enemy this project was the teleportation, implementing this into Overlord was
 								quite tough, but with a bunch of math I managed to do it.
-								First I check then if the player crossed the portal (via the dot product).
+								First I check if the player crossed the portal (via the dot product).
 								Next I teleport (move) the traveller to the other portal.
 								Finally I rotate the traveller so that it is facing outwards relative to the portal they
 								just travelled to (the portal is behind them).
@@ -291,6 +311,21 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		$main = $('#main'),
+		$panels = $main.children('.panel');
+		$experiencePanel = $panels.last();
+		$isActive = false;
 
+		function EnableArticles() 
+		{
+			if(!$isActive)
+				$experiencePanel.removeClass('inactive').show();
+			else
+				$experiencePanel.addClass('inactive').hide();
+
+			$isActive = !$isActive;
+		}
+	</script>
 </body>
 </html>

@@ -67,18 +67,26 @@
 					if (!$panel
 					||	$panel.length == 0) 
 					{
-						//This code is ugly, ignore it
-						var $panel2;
-						$panel = $panels[0];
-						$panel2 = $panels[1];
-
-						$panels.not($panel).not($panel2)
-						.addClass('inactive')
-						.hide();
-					
-
-						$nav_links.first().addClass('active');
-						$nav_links.first().addClass('active');
+						if($panels[0].id == "work")
+						{
+							var $panel2;
+							$panel = $panels[0];
+							$panel2 = $panels[1];
+	
+							$panels.not($panel).not($panel2)
+							.addClass('inactive')
+							.hide();
+						
+							$nav_links.first().addClass('active');
+						}
+						else
+						{
+							$panels.not($panels[0])
+							.addClass('inactive')
+							.hide();
+						
+							$nav_links.first().addClass('active');
+						}						
 					}
 					else
 					{

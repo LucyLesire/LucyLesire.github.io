@@ -60,11 +60,8 @@
 					<div class="col-4 col-12-medium">
 						<section id="sidebar" style="font-size: 20px;">
 							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Fruut Wars</h2>
-							<p>For the course Game Projects, I alongside 1 programmer and 3 artists made a vertical
-								slice of a couch game.
-								Our end result is a PVP shooter, where you play as fruits and vegetables.
-								<br><br>The goal of the game is to kill each other by firing fruits & vegetables,
-								whilest avoiding to fall in the water.</br>
+							Fruut Wars is a couch co-op PvP shooter where players take control of fruit characters armed with fruit and Vegetable based weapons, aiming to eliminate opponents while avoiding falling into water in a Battle Royale-style setting.			
+												<br><br> The game was made with a team of 5 where I had the of gameplay- and UI programmer.
 							</p>
 						</section>
 					</div>
@@ -81,14 +78,10 @@
 						<!-- Sidebar -->
 						<section id="sidebar">
 							<section>
-								<img src="images/Shaking.gif" class="image fit"
-									style="max-width: 100%; max-height: 100%;">
-								<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">I Learned</h2>
-								<p>During this project I have learned a lot about the Unreal Engine workflow, as this
-									was my first major project with c++ in Unreal Engine.
-									<br>I have also learned how to work with a team and how to make a (local)
-									multiplayer game.
-								</p>
+								<img src="images/SixthDevFruutwars.gif" class="image fit"
+								style="max-width: 100%; max-height: 100%;"><br>
+								<img src="images/SeventhDevFruutwars.gif" class="image fit"
+								style="max-width: 100%; max-height: 100%;">
 							</section>
 						</section>
 
@@ -97,30 +90,38 @@
 						<!-- Content -->
 						<section id="content" style="font-size: 20px;">
 							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">My Role</h2>
-							<p>My role in the project was very broad due to the small team size. Half of the programming
-								work was assigned to me, but I took a focus on gameplay logic.
+							<p>During this project my role focused on gameplay- and ui programming.
 							</p>
-							<ul aria-label="My work contained the following:">
-								<li>Brainstorming and taking charge of the game design</li>
-								<li>Creating the health component.</li>
-								<li>Creating the energy, dash and shield logic.</li>
-								<li>Creating the Powerups.</li>
-								<li>Creating the "Tile shaking" and "Tile sinking logic".</li>
-								<li>Implementing the Animation Blueprint logic.</li>
-								<li>Creating "Dr Jalapeño", "Lady Melon" & "Commisioner Potato"</li>
-								<li>Creating "The Corn Minigun", "The Lemon Bomb" & "The Coconut Ball".</li>
-								<li>Implementing the HUD".</li>
+							<ul aria-label="Gameplay Programming:">
+								<li>Player health system</li>
+								<li>Player Energy, dash and shield systems</li>
+								<li>The Powerups</li>
+								<li>The "Corn Minigun", "Lemon Bomb" & "Coconut Ball" weapons</li>
+								<li>The various different player characters</li>
+							</ul>
+							<ul aria-label="System Programming:">
+								<li>Tile shaking and sinking systems</li>
+								<li>HUD & Main menu logic</li>
+							</ul>
 							</ul>
 						</section>
 
 					</div>
 				</div>
-				<hr>
-				</hr>
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;" >
+					<div class="col-12 col-12-medium" style="text-align: center;">
+						<section id="content" style="font-size: 20px;">
+							<br><br>
+							<button onclick="EnableArticles()"><span style="font-family: Quicksand; font-size: 17px;"> Want to learn about my experiences?</span></button>
+						</section>
+					</div>
+				</div>
+			</article>
+			<article id="Experiences" class="panel" style="font-family: 'Quicksand'; font-size: 20px;">
 				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;">
 					<div class="col-4 col-12-medium">
 						<section>
-							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Weakly Dev</h2>
+							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Weekly Dev</h2>
 						</section>
 					</div>
 					<div class="col-8 col-12-medium imp-medium">
@@ -277,5 +278,22 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 
+	<script>
+		$main = $('#main'),
+		$panels = $main.children('.panel');
+		$experiencePanel = $panels.last();
+		$isActive = false;
+
+		function EnableArticles() 
+		{
+			if(!$isActive)
+				$experiencePanel.removeClass('inactive').show();
+			else
+				$experiencePanel.addClass('inactive').hide();
+
+			$isActive = !$isActive;
+		}
+	</script>
+	
 </body>
 </html>

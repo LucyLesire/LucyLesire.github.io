@@ -1661,12 +1661,14 @@ input, select, textarea {
 		transition: background-color .25s ease-in-out;
 		-webkit-appearance: none;
 		display: inline-block;
-		background-color: #222222;
-		color: #ffffff;
+		background-color: #ed776aa2;
+		color: #000000;
 		border: 0;
 		cursor: pointer;
 		outline: 0;
 		padding: 0.7em 1.5em 0.7em 1.5em;
+		border-radius: 12px; /* This rounds the corners */
+		padding: 8px 16px; 
 	}
 
 		input[type="button"]:hover,
@@ -1674,7 +1676,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #333333;
+			background-color: #ed776a6c;
 		}
 
 		input[type="button"]:active,
@@ -1682,7 +1684,7 @@ input, select, textarea {
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #444444;
+			background-color: #ed776a2d;
 		}
 
 		input[type="button"].alt,

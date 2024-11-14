@@ -68,7 +68,9 @@
 							<section id="sidebar" style="font-size: 20px;">
 								<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Project Rewrite</h2>
 								<p>
-								Project rewrite is a Horror game where you have to use time travel to your advantage to solve environmental puzzles and escape from the monster.</br></p>
+								Project rewrite is a Horror game where you have to use time travel to your advantage to solve environmental puzzles and escape from the monster.
+								<br><br> The game was made by a team of 5 people, where I had the roll of AI & Gameplay programmer.
+								</p>
 							</section>
 						</div>
 						<div class="col-8 col-12-medium"
@@ -86,44 +88,46 @@
 								<section>
 									<img src="images/PR1.gif" alt="Project Rewrite Trailer" class="image fit"
 										style="max-width: 100%; max-height: 100%;">
-									<p>Environment</p>
-									<img src="images/PR8.gif" alt="Project Rewrite Interacting" class="image fit"
+									<img src="images/PR2.gif" alt="Project Rewrite Interacting" class="image fit"
 									style="max-width: 100%; max-height: 100%;">
-									<p>Interacting</p>
-									<img src="images/PR5.gif" class="image fit"
-										style="max-width: 100%; max-height: 100%;" alt="Project Rewrite Jumpscare">
-									<p>Horror</p>
+									<img src="images/PR3.gif" alt="Project Rewrite Interacting" class="image fit"
+									style="max-width: 100%; max-height: 100%;">
 								</section>
 							</section>
 	
-						</div>
+						</div> 
 						<div class="col-8 col-12-medium imp-medium">
 							<!-- Content -->
 							<section id="content" style="font-size: 20px;">
-								<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Unreal Engine 5</h2>
-								<p>We chose Unreal Engine 5 because of a few reasons, one of them is Lumen. 
-									Lumen allows us to create an amazing environment for a horror game. 
-									For me as an AI programmer it was also helpful to be able to use the Blackboard & Behavior tree that Unreal has built in.
-								</p>
 								<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">My Role</h2>
 								<p>During this project I have managed to refind my love for AI programming and it has started my career as an AI programmer. For this project, I implemented all the AI logic from the ground up.</p>
-								<ul aria-label="My role in the project fell mainly under AI & Gameplay programming: ">
-									<li>Creating and implementing the Blackboard & Behavior tree</li>
-									<li>Writing and implementing the AI tasks (Patroling, Wandering, Chasing).</li>
-									<li>Writing and implementing the Perception Logic (Seeing & Hearing).</li>
-									<li>Writing and implementing the Monster Character & Spectral Monster Character</li>
-									<li>Writing and implementing the Monster Time Travel Ability.</li>
-									<li>Implemeting the Animations for the Monster</li>
-									<li>Writing and implementing "The Claymore"</li>
-									<li>Writing and implementing the Throwing Mechanic</li>
-									<li>Writing and implementing the Inventory</li>
-									<li>Implementing the UI & UI Logic</li>
+								<ul aria-label="AI Programming: ">
+									<li>Monster player tracking and time travelling</li>
+									<li>Monster Attacking Behaviours</li>
+									<li>Monster Pathfinding</li>
+								</ul>
+								<ul aria-label="Gameplay Programming:">
+									<li>Throwing Mechanic of the player</li>
+									<li>The Claymore behaviour</li>
+									<li>The Medkit Behaviour</li>
+								</ul>
+								<ul aria-label="Systems Programming:">
+									<li>Player Inventory System</li>
+									<li>UI flow</li>
 								</ul>
 							</section>
 						</div>
 					</div>
-					<hr>
-					</hr>
+					<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;" >
+						<div class="col-12 col-12-medium" style="text-align: center;">
+							<section id="content" style="font-size: 20px;">
+								<br><br>
+								<button onclick="EnableArticles()"><span style="font-family: Quicksand; font-size: 17px;"> Want to learn about my experiences?</span></button>
+							</section>
+						</div>
+					</div>
+				</article>
+				<article id="Experiences" class="panel" style="font-family: 'Quicksand'; font-size: 20px;">
 					<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;">
 						<div class="col-4 col-12-medium">
 							<section>
@@ -231,5 +235,21 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 
+	<script>
+		$main = $('#main'),
+		$panels = $main.children('.panel');
+		$experiencePanel = $panels.last();
+		$isActive = false;
+
+		function EnableArticles() 
+		{
+			if(!$isActive)
+				$experiencePanel.removeClass('inactive').show();
+			else
+				$experiencePanel.addClass('inactive').hide();
+
+			$isActive = !$isActive;
+		}
+	</script>
 </body>
 </html>
