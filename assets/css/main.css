@@ -1834,6 +1834,10 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		.icon.brands6:before {
+			font-family: 'Font Awesome 6 Brands';
+		}
+
 		.icon:before {
 			line-height: inherit;
 		}

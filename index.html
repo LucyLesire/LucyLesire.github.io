@@ -119,6 +119,11 @@
 								<p>A co-op VR experience<br>Unity - Released Game</p>
 							</div>
 							<div class="col-4 col-6-medium col-12-small">
+								<a href="ColorACube.html" class="image fit"><img src="images/ColorACube.png" alt=""></a>
+								<h1 style="font-size: 37px; line-height: 150%;">Color a Cube</h1>
+								<p>A cozy VR coloring game<br>Unity - Released Game</p>
+							</div>
+							<div class="col-4 col-6-medium col-12-small">
 								<a href="RTS.html" class="image fit"><img src="images/HeartSketchFormation.png"
 										alt=""></a>
 								<h1 style="font-size: 37px; line-height: 150%;">Sketch Formations</h1>
@@ -141,11 +146,6 @@
 								<a href="Portal.html" class="image fit"><img src="images/PortalRemake.png" alt=""></a>
 								<h1 style="font-size: 37px; line-height: 150%;">Portal Remake</h1>
 								<p>The classic portal <br> C++</p>
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
-								<a href="" class="image fit"><img src="images/InProgress.png" alt=""></a>
-								<h1 style="font-size: 37px; line-height: 150%;">Color a Cube</h1>
-								<p>A cozy VR coloring game<br>Unity - In progress Game</p>
 							</div>
 						</div>
 					</section>
@@ -256,9 +256,10 @@
 		const sentences = [
 		  "working on AI behaviours.",
 		  "making tools to speed up development.",
-		  "drinking Cola Zero."
+		  "drinking Cola Zero.",
+		  "making abstract systems."
 		];
-		let sentenceIndex = 0;
+		let sentenceIndex = getRandomInt(0, sentences.length);
 		let charIndex = 0;
 		let isTyping = true;
 		let typingSpeed = 200; // Speed of typing (in milliseconds)
@@ -286,6 +287,12 @@
 			sentenceIndex = (sentenceIndex + 1) % sentences.length;
 			typeSentence(); // Start typing the next sentence
 		  }
+		}
+
+		function getRandomInt(min, max) {
+  			const minCeiled = Math.ceil(min);
+  			const maxFloored = Math.floor(max);
+  				return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
 		}
 	
 		// Start the typing effect
