@@ -11,11 +11,10 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script>$(document).ready(function()
-	{
-		$("nav a").removeClass("active")
-        $('#' + 'work').addClass("active");
-	});
+	<script>$(document).ready(function () {
+			$("nav a").removeClass("active")
+			$('#' + 'work').addClass("active");
+		});
 	</script>
 </head>
 <style>
@@ -36,10 +35,10 @@
 			<a href="index.html" class="icon solid fa-home" id="work"><span>Home</span></a>
 			<a href="index.html#aboutme" class="icon solid fa-user-ninja"><span>About Me</span></a>
 			<a href="/resources/Lucy_Lesire_Curriculum_Vitae.pdf"
-			   class="icon solid fa-file-download"><span>CV</span></a>
+				class="icon solid fa-file-download"><span>CV</span></a>
 			<a href="mailto: Lucy.lesire@outlook.com" class="icon solid fa-envelope"><span>Contact</span></a>
 		</nav>
-        <div id="main">
+		<div id="main">
 			<!--Fruut Wars-->
 			<article id="fruutwars" class="panel" style="font-family: 'Quicksand'; font-size: 20px;">
 				<header id="logo" style="text-align: center; letter-spacing: 5px;">
@@ -60,8 +59,10 @@
 					<div class="col-4 col-12-medium">
 						<section id="sidebar" style="font-size: 20px;">
 							<h2 style="margin-bottom: 0.5em; margin-top: 0.5em;">Fruut Wars</h2>
-							Fruut Wars is a couch co-op PvP shooter where players take control of fruit characters armed with fruit and Vegetable based weapons, aiming to eliminate opponents while avoiding falling into water in a Battle Royale-style setting.			
-												<br><br> The game was made with a team of 5 where I had the of gameplay- and UI programmer.
+							Fruut Wars is a couch co-op PvP shooter where players take control of fruit characters armed
+							with fruit and Vegetable based weapons, aiming to eliminate opponents while avoiding falling
+							into water in a Battle Royale-style setting.
+							<br><br> The game was made with a team of 5 where I had the of gameplay- and UI programmer.
 							</p>
 						</section>
 					</div>
@@ -79,9 +80,9 @@
 						<section id="sidebar">
 							<section>
 								<img src="images/SixthDevFruutwars.gif" class="image fit"
-								style="max-width: 100%; max-height: 100%;"><br>
+									style="max-width: 100%; max-height: 100%;"><br>
 								<img src="images/SeventhDevFruutwars.gif" class="image fit"
-								style="max-width: 100%; max-height: 100%;">
+									style="max-width: 100%; max-height: 100%;">
 							</section>
 						</section>
 
@@ -89,7 +90,8 @@
 					<div class="col-8 col-12-medium imp-medium">
 						<!-- Content -->
 						<section id="content" style="font-size: 20px;">
-							<h3 id="header1" style="margin-top: 0.5em; margin-bottom: -0.5em;">Gameplay Programming:</h3>
+							<h3 id="header1" style="margin-top: 0.5em; margin-bottom: -0.5em;">Gameplay Programming:
+							</h3>
 							<ul aria-labelledby="header1">
 								<li>Made the Player health system</li>
 								<li>Wrote the Player Energy, dash and shield systems</li>
@@ -103,16 +105,16 @@
 								<li>Implemented HUD & Main menu logic</li>
 								<li>Added the victory effects</li>
 							</ul>
-							</ul>
 						</section>
 
 					</div>
 				</div>
-				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;" >
+				<div class="row gtr-150" style="font-family: 'Quicksand'; font-size: 20px;">
 					<div class="col-12 col-12-medium" style="text-align: center;">
 						<section id="content" style="font-size: 20px;">
 							<br><br>
-							<button onclick="EnableArticles()"><span style="font-family: Quicksand; font-size: 17px;"> Want to learn about my experiences?</span></button>
+							<button onclick="EnableArticles()"><span style="font-family: Quicksand; font-size: 17px;">
+									Want to learn about my experiences?</span></button>
 						</section>
 					</div>
 				</div>
@@ -249,7 +251,7 @@
 					</div>
 				</div>
 			</article>
-        </div>
+		</div>
 		<!-- #region Footer -->
 		<!-- Footer -->
 		<div id="footer">
@@ -270,8 +272,8 @@
 			</ul>
 		</div>
 		<!-- #endregion -->
-    </div>
-    	<!-- Scripts -->
+	</div>
+	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
@@ -280,13 +282,12 @@
 
 	<script>
 		$main = $('#main'),
-		$panels = $main.children('.panel');
+			$panels = $main.children('.panel');
 		$experiencePanel = $panels.last();
 		$isActive = false;
 
-		function EnableArticles() 
-		{
-			if(!$isActive)
+		function EnableArticles() {
+			if (!$isActive)
 				$experiencePanel.removeClass('inactive').show();
 			else
 				$experiencePanel.addClass('inactive').hide();
@@ -294,6 +295,7 @@
 			$isActive = !$isActive;
 		}
 	</script>
-	
+
 </body>
+
 </html>
